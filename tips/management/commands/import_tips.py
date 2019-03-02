@@ -29,16 +29,11 @@ class Command(BaseCommand):
             error = 'Cannot run this without SU pybites'
             sys.exit(error)
 
-        tips = Tip.objects.count()
-        if tips > 0:
-            error = 'Tips already imported'
-            sys.exit(error)
-
         html = requests.get(TIPS_PAGE)
         soup = BeautifulSoup(html.text, 'html.parser')
         trs = soup.findAll("tr")
 
-        tips = []
+        new_tips_created = 0
         for tr in trs:
             tds = tr.find_all("td")
             tip_html = tds[1]
@@ -57,10 +52,12 @@ class Command(BaseCommand):
             tip = tip_html.find("blockquote").text
             src = len(links) > 1 and links[1].attrs.get('href') or None
 
-            tips.append(Tip(tip=tip, code=code, link=src,
-                            user=user, approved=True,
-                            share_link=share_link))
+            _, created = Tip.objects.get_or_create(tip=tip, code=code,
+                                                   link=src, user=user,
+                                                   approved=True,
+                                                   share_link=share_link)
 
-        Tip.objects.bulk_create(tips)
+            if created:
+                new_tips_created += 1
 
-        print(f'Done: {len(tips)} tips imported')
+        print(f'Done: {new_tips_created} tips imported')
