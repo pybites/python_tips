@@ -1,2 +1,4 @@
 django
 djangorestframework
+bs4
+requests
