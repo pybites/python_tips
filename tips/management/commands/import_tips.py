@@ -29,6 +29,11 @@ class Command(BaseCommand):
             error = 'Cannot run this without SU pybites'
             sys.exit(error)
 
+        tips = Tip.objects.count()
+        if tips > 0:
+            error = 'Tips already imported'
+            sys.exit(error)
+
         html = requests.get(TIPS_PAGE)
         soup = BeautifulSoup(html.text, 'html.parser')
         trs = soup.findAll("tr")
