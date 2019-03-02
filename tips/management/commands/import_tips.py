@@ -25,7 +25,6 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         try:
             user = User.objects.get(username=PYBITES)
-            author = user.author
         except User.DoesNotExist:
             error = 'Cannot run this without SU pybites'
             sys.exit(error)
@@ -54,7 +53,7 @@ class Command(BaseCommand):
             src = len(links) > 1 and links[1].attrs.get('href') or None
 
             tips.append(Tip(tip=tip, code=code, link=src,
-                            author=author, approved=True,
+                            user=user, approved=True,
                             share_link=share_link))
 
         Tip.objects.bulk_create(tips)
