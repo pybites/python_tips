@@ -8,14 +8,14 @@ class Tip(models.Model):
     tip = models.TextField()
     code = models.TextField(blank=True, null=True)
     link = models.URLField(blank=True, null=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     # set by admin
-    approved = models.BooleanField(default=True)
+    approved = models.BooleanField(default=False)
     share_link = models.URLField(blank=True, null=True)
 
     added = models.DateTimeField(auto_now_add=True)
     edited = models.DateTimeField(auto_now=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 class Author(models.Model):
