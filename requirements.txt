@@ -4,3 +4,4 @@ bs4
 requests
 gunicorn
 psycopg2
+psycopg2-binary
