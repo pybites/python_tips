@@ -44,7 +44,6 @@ class Command(BaseCommand):
             pre = tip_html.find("pre")
             code = pre and pre.text or None
 
-            # skip if tweeted or not code in tip
             share_link = None
             if PYBITES_HAS_TWEETED in first_link:
                 share_link = first_link
