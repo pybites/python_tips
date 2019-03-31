@@ -3,7 +3,7 @@ from rest_framework import permissions
 
 class IsOwnerOrReadOnly(permissions.BasePermission):
     """
-    Make sure only owners of quotes can edit them.
+    Make sure only owners of tips can edit them.
     """
 
     def has_object_permission(self, request, view, obj):

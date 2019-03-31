@@ -1,3 +1,3 @@
-# tips_api
+# PyBites Tips API
 
-for article ... (soon)
+Article: [Building a Python Tips API with Django REST Framework and Deploying it to Digital Ocean](https://pybit.es/django-rest-tips-api-digital-ocean.html)
