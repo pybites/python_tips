@@ -1,10 +1,8 @@
 # PyBites Tips API
 
-Article: [Building a Python Tips API with Django REST Framework and Deploying it to Digital Ocean](https://pybit.es/django-rest-tips-api-digital-ocean.html)
+## Part of the 100 Days of web with Python Talk Python Course
 
-## 100 Days of web with Python demo API
-
-Here are the instructions to setup this API locally.
+Here are the instructions to set this API up locally.
 
 If you want to automate below in one step, you can use the included `Makefile`. In that case you can just run `make setup && make run` and you should be good to go.
 
@@ -33,3 +31,7 @@ echo "from django.contrib.auth.models import User; User.objects.create_superuser
 ---
 
 Browse to [http://localhost:8000/api/](http://localhost:8000/api/) - enjoy!
+
+---
+
+This API was initially linked to: [Building a Python Tips API with Django REST Framework and Deploying it to Digital Ocean](https://pybit.es/django-rest-tips-api-digital-ocean.html) - leaving this here just in case.
