@@ -28,8 +28,10 @@ class Command(BaseCommand):
             sys.exit(error)
 
         resp = requests.get(TIPS_PAGE)
+        resp.raise_for_status()
+
         new_tips_created = 0
-        for row in resp:
+        for row in resp.json():
             _, created = Tip.objects.get_or_create(
                 tip=row["tip"],
                 code=row["code"],
