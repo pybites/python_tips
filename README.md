@@ -2,11 +2,13 @@
 
 Article: [Building a Python Tips API with Django REST Framework and Deploying it to Digital Ocean](https://pybit.es/django-rest-tips-api-digital-ocean.html)
 
-## Talk Python 100 days for Web demo
+## 100 Days of web with Python demo API
 
-If you want to automate below in one step, you can use the `Makefile` included, just run `make setup && make run`.
+Here are the instructions to setup this API locally.
 
-To set this project up step by step, do the following:
+If you want to automate below in one step, you can use the included `Makefile`. In that case you can just run `make setup && make run` and you should be good to go.
+
+To do this setup manually go through these steps:
 
 1. Make a virtual environment: `python -m venv venv`.
 
