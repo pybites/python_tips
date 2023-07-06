@@ -1,7 +1,7 @@
 asgiref==3.3.4
 certifi==2022.12.7
 chardet==4.0.0
-Django==3.2.19
+Django==3.2.20
 django-cors-headers==3.7.0
 djangorestframework==3.12.4
 idna==2.10
