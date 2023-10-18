@@ -8,4 +8,4 @@ idna==2.10
 pytz==2021.1
 requests==2.31.0
 sqlparse==0.4.4
-urllib3==1.26.17
+urllib3==1.26.18
