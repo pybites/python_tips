@@ -7,5 +7,5 @@ djangorestframework==3.12.4
 idna==3.7
 pytz==2021.1
 requests==2.31.0
-sqlparse==0.4.4
+sqlparse==0.5.0
 urllib3==1.26.18
